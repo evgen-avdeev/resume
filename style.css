@@ -285,6 +285,9 @@ address {
 .site-footer nav {
   text-shadow: 0.5px 0.5px #000000;
 }
-footer img:hover {
+footer img {
   filter: invert(100%);
+}
+footer img:hover {
+  filter: invert(1%);
 }
