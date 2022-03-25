@@ -1,16 +1,74 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* убираем линии обводки у некоторых браузеров  */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+/* перечисляем теги и присваиваем им значение block, что делает их блочными  */
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+/* уравниваем поведение шрифтов и элементов для разных браузеров.. например запрещают самовольное увеличение шрифта на айфонах */
+html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
   font-family: Arial, sans-serif;
-  line-height: 20px;
-  background-image: url("./icons/grey_field.jpg");
+  font-size: 14px;
+  background: url("icons/grey_field.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border: 2px solid gray;
+  background-size: 100% 100% 100%;
+
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
+/* просим формы наследовать семейство шрифта, т.к по умолчанию они не наследуют */
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
 .site-header {
   width: 75em;
   margin: 0 auto;
+}
+.time-zone {
+  width: 45%;
+  text-align: right;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-right: 15px;
+}
+.time-zone p {
+  font-size: 11px;
+  text-align: right;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-right: 15px;
+}
+.bookmark {
+  width: 30%;
+  margin-top: 0px;
+  padding-right: 300px;
 }
 .content {
   width: 75em;
@@ -102,8 +160,6 @@ aside {
 /*#globe-img {
   background-image: url("icons/globe1.png");
   background-repeat: no-repeat;
-  background-size:cover;
- opacity: 0.55;
   border-radius: 50%;
 }*/
 .p-aside {
