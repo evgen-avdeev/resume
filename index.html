@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Developer - Evgen</title>
+    <title>Web Developer - Evhen Avdeev</title>
     <link rel="stylesheet" href="style.css">
 </head>
             
+    <div class="container">        
         <header class="site-header">
-                <img src="icons/bookmark.png" alt="bookmark" height="80px">
-                <h1>Evgen Avdeev</h1>
-                <img src="icons/avatar.jpg" alt="avatar" width="150" style="border-radius:50%" />
+            <table>
+                <tr>
+                    <td class="bookmark"><img src="icons/bookmark.png" alt="bookmark" height="80px">
+                    </td>
+                    <td class="td-span"></td>
+                    <td class="time-zone">
+                        <p><script>
+                            document.write("Today is " + Date() );
+                        </script></p>
+                    </td>   
+                </tr>
+            </table>
+                <h1>Evhen Avdeev</h1>
+                
+                <div class="inline">
+                    <div class="card">
+                        <img src="icons/avatar.jpg" alt="avatar" class="avatar"/>
+                    
+                        <div class="card2">
+                        <h5>Front end web development </h5>
+                            <p class="profession">Front end web-developer <u> student</u> </p>
+                            <p class="profession"> Technologies: HTML, CSS, <br> VS Code, GitHub </p>
+                    </div>
+                         </div>
+                
+                </div>
                 <br><br>
-                <h5>Front end web development </h5>
-                <!-- <h4>Web Developer</h4> -->
-                <!-- <h3>Web Developer</h3> -->
+              
         </header>
         
         <main>
             <div class="content"> 
                 <!-- <hr> -->
-                    <p class="profession">Front end web-developer <u> student</u>, solution focused. <br>
-                        Technologies: HTML, CSS, VS Code, GitHub </p>
-                        <br>
+               
 <!-- Aside Bar -- Используй Интерактивный контент:
 <menu>, если атрибут type имеет значение toolbar (справочник 'mdn')-->
             <aside id="globe-img">
@@ -38,23 +58,23 @@
             
                 <h2>HOBBY</h2>
                 <p>
-                    <ul type="circle"> 
+                    <ul type="circle" class="list"> 
                         <li>web design</li>
-                        <li>button accordion</li>
+                        <li>button accordion playing</li>
                         <li>travelling</li>
                         <li>cooking</li>
                     </ul>
                 </p>
                 <br>
               <h2>EDUCATION</h2>
-                <p>
-                    <ul> 
+                <div class="ul-box">
+                    <ul class="list"> 
                         <li>Mar, 2022 - HTML,CSS course student in 'Result School' (by Vladilen Minin)</li>
-                        <li>Jun, 2013 - 'Diploma in Aviation Studies' by International Air Transport Association(IATA), Montreal</li>
+                        <li>Jun, 2013 - 'Diploma in Aviation Studies' by International Air Transport Association (IATA), Montreal</li>
                         <li>Feb, 2003 - 'Translator/Enterpreter (en-ru), Diploma by Kuban State Technological University</li>
                             <br>
                      </ul>
-                </p>
+                </div>
                     <br>
                <h2>WORK EXPERIENCE</h2>
                 
@@ -78,60 +98,55 @@
                             <td>2018-2020</td> 
                         </tr>
                         <tr>
-                            <td>'Goldair Handling' </td> 
-                            <td>| Foreign Commercial Representative </td> 
+                            <td>'Goldair Handling', Greece </td> 
+                            <td>| Foreign Commercial Representative in CIS</td> 
                             <td>2013-2020</td> 
                         </tr>
                     </tbody>
 
                         <li>17 years past experience in airport & airline handling industry, international sector </li>
-                      
+                      <br>
                </table>
                <br><br>
                
 <!--FORMS--> <hr>
             
+                 <form action="/" class="form">
                <h2>Contact me:</h2>
-                <form action="#">
-                    <div>
+                <div class="form-row">     
+                    <div class="form-group">
                         <label for="name">Your name</label>
                         <input type="text" id="name" placeholder="input your name">
                     </div>
-                    <div>
-                        <label for="email">Your e-mail</label>
+                    <div class="form-group">
+                        <label for="email">Your email</label>
                         <input type="email" id="email" placeholder="input your email">
                     </div>
-                   <div>
+                </div>
+                   <div class="form-group">
                         <label for="message">Your message</label>
-                        <br>
                         <textarea id="message" cols="30" rows="7" placeholder="input your message here..."></textarea>    
                        <button type="submit" id="submit">Send</button>
                     </div>           
                 </form>
 
                 <br><br><br>
- 
- <!-- script for date section  -->
-
-                    <p style="#">
-                        <script>
-                            document.write("Today is " + Date() );
-                        </script>
-                    </p><br>
+                   
         </div> 
         </main>
 
         <footer class="site-footer">
             <nav>
-                <a href="www.ground.aero"><ins>ground.aero </ins>|</a> 
+                <a href="http://www.ground.aero" target="_blank"><ins>ground.aero </ins>|</a> 
                 <a href="#"><ins>events.aero </ins>|</a> 
                  <a href="#"><ins>b2b.aero</ins>|</a> 
             </nav>
-            <address>My Contacts: <a href="mailto:e.avdeev@ground.aero" style="color:#e7e7e7;">Send email</a>; e.avdeev@ground.aero; cell: 007 (916) 644 52 96; Moscow, 108836 </address>
-           <hr>
-                <img src="icons/globe1.png" alt="globe" width="45px" style="vertical-align:middle;float:center">    
+            <address>My Contacts: <a href="mailto:e.avdeev@ground.aero" style="color:#e7e7e7;">Send email</a>; e.avdeev@ground.aero; W/A: 007 (916) 644 52 96 </address>
+           <hr style="width:55%;">
+                <img id="globe" src="icons/globe1.png" alt="globe" width="45px" style="vertical-align:middle;float:center">    
                 <br>
         </footer>
+    </div>
               
         
     </body>

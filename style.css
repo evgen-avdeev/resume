@@ -22,6 +22,7 @@ aside {
   display: block;
 }
 /* уравниваем поведение шрифтов и элементов для разных браузеров.. например запрещают самовольное увеличение шрифта на айфонах */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html,
 body {
   margin: 0;
@@ -30,7 +31,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   background: url("icons/grey_field.jpg");
   background-repeat: no-repeat;
@@ -47,42 +48,76 @@ textarea {
   font-family: inherit;
 }
 
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+}
 .site-header {
-  width: 75em;
+  width: 80em;
   margin: 0 auto;
 }
 .time-zone {
-  width: 45%;
+  width: 35%;
   text-align: right;
   margin-top: 0px;
   padding-top: 0px;
   padding-right: 15px;
 }
 .time-zone p {
+  width: 400px;
   font-size: 11px;
   text-align: right;
   margin-top: 0px;
   padding-top: 0px;
-  padding-right: 15px;
+  padding-right: 5px;
 }
 .bookmark {
   width: 30%;
   margin-top: 0px;
+  text-align: left;
   padding-right: 300px;
 }
+.inline .card {
+  display: flex;
+}
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  padding: 1px;
+}
+.profession {
+  color: #e7e7e7 !important;
+  padding-left: 45px;
+}
+div .card {
+  border: none;
+  width: fit-content;
+  border-radius: 150px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  background: rgba(231, 231, 231, 0.2);
+  box-shadow: 5px 5px 5px #080808;
+}
+.card2 h5 {
+  padding-right: 35px;
+}
 .content {
-  width: 75em;
+  width: 80em;
   margin: 0 auto;
 }
 h1 {
   font-weight: normal;
   color: #e7e7e7; /* darkslategrey */
+  opacity: 1;
 }
 h2 {
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
   font-size: 19px;
   color: #e7e7e7;
+  opacity: 1;
 }
 h3 {
   font-weight: normal;
@@ -90,20 +125,23 @@ h3 {
     0.2px 0 darkslategrey, 0 -0.2px darkslategrey;
   font-size: 22px;
   color: #04aa6d;
+  opacity: 1;
 }
 h4 {
   color: #e7e7e7;
+  opacity: 1;
   text-shadow: 3px 1px 05px #243b3b;
   font-size: 24px;
 }
 h5 {
   color: #e7e7e7;
+  opacity: 1;
   text-shadow: 3px 1px 05px #00346400;
   font-size: 24px;
   text-decoration: underline 1px;
   margin-bottom: 2px;
+  padding-left: 25px;
 }
-
 ins {
   color: #4da9ff;
 }
@@ -123,15 +161,23 @@ a:active {
 p,
 li {
   text-align: justify;
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
   font-size: 15px;
   color: #e7e7e7;
-  width: 100%;
+  opacity: 1;
+  width: 80%;
 }
-.profession {
-  margin-left: 25px;
+.list {
+  padding: 0 20px;
 }
+.list li {
+  margin-bottom: 5px;
+}
+div.ul-box {
+  padding-right: 400px;
+}
+
 thead,
 tbody {
   text-align: left;
@@ -142,7 +188,7 @@ th {
 }
 td {
   padding: 2px 2px 0 12px;
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
   font-size: 15px;
 }
@@ -151,22 +197,18 @@ aside {
   height: 450px;
   float: right;
   padding-left: 0px;
-  margin-right: 55px;
+  margin-right: 45px;
   background-color: #c2c2c23b;
 
   box-shadow: 9px 45px 55px #162727;
   border-radius: 50%;
 }
-/*#globe-img {
-  background-image: url("icons/globe1.png");
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}*/
 .p-aside {
   color: #e7e7e7;
   font-weight: bold;
   font-size: 22px;
   text-align: center;
+  padding-left: 100px;
 }
 .btn-group {
   float: center;
@@ -266,19 +308,35 @@ aside {
 .btn-group .button:hover {
   background-color: #6cb8ffea;
 }
-textarea {
-  background-color: #c2c2c23b;
-  border: 1px solid #adadad;
+
+.form-row {
+  margin-bottom: 10px;
+  display: flex;
+}
+.form-row .form-group {
+  /* display: inline-block; */
+  margin-right: 20px;
+  /* width: calc(50% - 20px); */
+  width: 18%;
+}
+.form-row .form-group:last-child {
+  margin-right: 0px;
+}
+.form h2 {
+  text-align: left;
+}
+.form-group label {
+  display: block;
+}
+.form-group input {
+  width: 100%;
   box-sizing: border-box;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  color: white;
-  padding: 55px 0 5px 15px;
+  padding: 5px 0 5px;
+  font-family: inherit;
 }
 ::placeholder {
-  color: black;
-  opacity: 0.65;
+  color: rgb(255, 255, 255);
+  opacity: 0.45;
 }
 label {
   color: #e7e7e7;
@@ -288,19 +346,17 @@ label {
   border-radius: 18px;
   background-color: #c2c2c271;
   opacity: 0.85;
-  border: 1px solid #adadad;
-  box-shadow: 1px 1px 05px #e7e7e700;
   color: white;
   padding-left: 15px;
+  box-shadow: inset 0 0 5px #070707;
 }
 #email {
   border-radius: 18px;
   background-color: #c2c2c271;
   opacity: 0.85;
-  border: 1px solid #adadad;
-  box-shadow: 1px 1px 05px #e7e7e700;
   color: white;
   padding-left: 15px;
+  box-shadow: inset 0 0 5px #070707;
 }
 #submit {
   height: 45px;
@@ -317,29 +373,41 @@ label {
   color: black;
   font-weight: bolder;
 }
+textarea {
+  background-color: #c2c2c23b;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px #070707;
+  color: white;
+  padding: 55px 0 5px 15px;
+}
 
 address {
   text-align: center;
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  font-size: 15px;
+  font-size: 17px;
   color: #e0dfdf;
 }
 .site-footer {
   width: 75em;
   margin: 0 auto;
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
 .site-footer p {
   width: 75em;
   margin: 0 auto;
-  font-family: Veranda, sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   vertical-align: middle;
 }
 .site-footer nav {
   text-shadow: 0.5px 0.5px #000000;
+  font-size: 18px;
+  padding-bottom: 7px;
 }
 footer img {
   filter: invert(100%);
