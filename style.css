@@ -23,8 +23,7 @@ aside {
 }
 /* уравниваем поведение шрифтов и элементов для разных браузеров.. например запрещают самовольное увеличение шрифта на айфонах */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-html,
-body {
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -33,13 +32,20 @@ body {
   line-height: 1;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  background: url("icons/grey_field.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100% 100%;
 
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%;
+  width: 100%; */
+  background: url(icons/purple-shape.jpg);
+  background-repeat: no-repeat;
+  background-color: blueviolet;
+  background-size: cover;
 }
 /* просим формы наследовать семейство шрифта, т.к по умолчанию они не наследуют */
 input,
